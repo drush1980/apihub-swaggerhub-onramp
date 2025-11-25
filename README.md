@@ -15,11 +15,13 @@ This plugin implementation is written in [Go](https://go.dev/) and is designed t
 
 ## Limitations
 
-This implementation is currently only designed to import OpenAPI specifications from SwaggerHub. Future versions may support other formats.
+This implementation is currently only designed to import [OpenAPI](https://www.openapis.org/) specifications from SwaggerHub. Future versions may support other API formats.
 
 SwaggerHub lacks the ability to configure a global webhook to notify when APIs are created, updated, or deleted, so this plugin uses a simple polling mechanism to sync APIs every 5 minutes.
 
-This also means that the plugin cannot detect when APIs are deleted from SwaggerHub. However, using SwaggerHub's [email notifications](https://support.smartbear.com/swaggerhub/docs/en/get-email-notifications.html) plus automation tooling, it may be possible to create an email-to-webhook bridge to notify the plugin when APIs are deleted.
+This also means that the plugin cannot detect when APIs are deleted from SwaggerHub. 
+
+> Using SwaggerHub's [email notifications](https://support.smartbear.com/swaggerhub/docs/en/get-email-notifications.html) plus automation tooling, it may be possible to create an email-to-webhook bridge to notify the plugin when APIs are deleted.
 
 ## Note about API hub fingerprints
 

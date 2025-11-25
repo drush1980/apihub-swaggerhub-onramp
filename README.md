@@ -19,6 +19,12 @@ SwaggerHub lacks the ability to configure a global webhook to notify when APIs a
 
 This also means that the plugin cannot detect when APIs are deleted from SwaggerHub. However, using SwaggerHub's [email notifications](https://support.smartbear.com/swaggerhub/docs/en/get-email-notifications.html) plus automation tooling, it may be possible to create an email-to-webhook bridge to notify the plugin when APIs are deleted.
 
+## Note about API hub fingerprints
+
+When creating or importing APIs via the plugin framework, API hub uses the concept of a "fingerprint" to uniquely identify APIs. When a plugin source imports API data, the fingerprint provided is used to determine if the API is a new API, or an update to an existing API. If you have existing plugin sources configured in your API hub, you will need to ensure the fingerprint is consistent across all plugin sources to avoid duplicate APIs. You can use the `Fingerprint` property in the `APIMetadata` struct to define this. This implementation uses the API ID from SwaggerHub as the fingerprint.
+
+> The [built-in plugins](https://docs.cloud.google.com/apigee/docs/apihub/plugins#supported-plugins) for Apigee use the proxy name as the fingerprint. To override that behvavior you may use a custom [Curation](https://docs.cloud.google.com/apigee/docs/apihub/curations) flow to set the desired fingerprint. 
+
 ## Prerequisites
 
 -   A Google Cloud project with billing enabled.

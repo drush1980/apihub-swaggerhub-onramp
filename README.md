@@ -58,7 +58,7 @@ This script will:
 - Create a Secret Manager secret containing your SwaggerHub API key.
 - Create a Service Account with necessary permissions.
 - Build and deploy the Cloud Run service.
-- Create a Cloud Scheduler job to trigger the sync every 5 minutes.
+- Create a Cloud Scheduler job to trigger the sync every 5 minutes. You may adjust the [interval](https://docs.cloud.google.com/scheduler/docs/configuring/cron-job-schedules) as desired.
 
 ## Testing
 

@@ -11,7 +11,7 @@ This plugin implementation is written in [Go](https://go.dev/) and is designed t
 -   Fetches API definitions from a specified SwaggerHub organization/owner.
 -   Ingests the APIs into Apigee API hub using the `CollectApiData` function from the [Go client library for API hub](https://pkg.go.dev/cloud.google.com/go/apihub).
 -   Automatically syncs every 5 minutes.
--   The SwaggerHub API key is securely stored in Google Cloud Secret Manager.
+-   The SwaggerHub API key is securely stored in [Google Cloud Secret Manager](https://cloud.google.com/security/products/secret-manager).
 
 ## Limitations
 

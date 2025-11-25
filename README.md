@@ -6,6 +6,8 @@ This plugin implementation is written in [Go](https://go.dev/) and is designed t
 
 ## Details
 
+![image](architecture.png)
+
 -   Fetches API definitions from a specified SwaggerHub organization/owner.
 -   Ingests the APIs into Apigee API hub using the `CollectApiData` function from the [Go client library for API hub](https://pkg.go.dev/cloud.google.com/go/apihub).
 -   Automatically syncs every 5 minutes.

@@ -23,7 +23,7 @@ This also means that the plugin cannot detect when APIs are deleted from Swagger
 
 When creating or importing APIs via the plugin framework, API hub uses the concept of a "fingerprint" to uniquely identify APIs. When a plugin source imports API data, the fingerprint provided is used to determine if the API is a new API, or an update to an existing API. If you have existing plugin sources configured in your API hub, you will need to ensure the fingerprint is consistent across all plugin sources to avoid duplicate APIs. You can use the `Fingerprint` property in the `APIMetadata` struct to define this. This implementation uses the API ID from SwaggerHub as the fingerprint.
 
-> The [built-in plugins](https://docs.cloud.google.com/apigee/docs/apihub/plugins#supported-plugins) for Apigee use the proxy name as the fingerprint. To override that behvavior you may use a custom [Curation](https://docs.cloud.google.com/apigee/docs/apihub/curations) flow to set the desired fingerprint. 
+> The [built-in API hub plugins](https://docs.cloud.google.com/apigee/docs/apihub/plugins#supported-plugins) for Apigee use the proxy name as the fingerprint. To override that behavior you may use a custom [Curation](https://docs.cloud.google.com/apigee/docs/apihub/curations) flow to set the desired fingerprint. 
 
 ## Prerequisites
 

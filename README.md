@@ -66,6 +66,7 @@ To run the plugin locally for testing:
 3.  Create a hub plugin and plugin instance if you haven't already (see `deploy.sh` for example commands to do this).
 4.  Run the plugin:
     ```bash
+    go mod tidy # optional but recommended
     go run main.go
     ```
 5.  In a separate terminal, trigger a sync:

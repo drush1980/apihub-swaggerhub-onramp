@@ -54,6 +54,25 @@ export SWAGGERHUB_OWNER="your-swaggerhub-owner"
 export SWAGGERHUB_API_KEY="your-swaggerhub-api-key"
 ```
 
+## Local Testing
+
+To run the plugin locally for testing:
+
+1.  Ensure you have authenticated with Google Cloud to allow the plugin to access API Hub.
+2.  Set the required environment variables:
+    ```bash
+    source env.sh
+    ```
+3.  Create a hub plugin and plugin instance if you haven't already (see `deploy.sh` for example commands to do this).
+4.  Run the plugin:
+    ```bash
+    go run main.go
+    ```
+5.  In a separate terminal, trigger a sync:
+    ```bash
+    curl "http://localhost:8080/sync?plugin_instance=<plugin instance id from step 3>" -X POST
+    ```
+
 ## Deployment
 
 To deploy the plugin and all required resources, run:
